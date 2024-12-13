@@ -234,3 +234,4 @@ rag_workflow
 *.pth
 
 logs/
+*.csv
