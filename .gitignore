@@ -231,5 +231,6 @@ databackup
 mindmap
 
 rag_workflow
+*.pth
 
 logs/
