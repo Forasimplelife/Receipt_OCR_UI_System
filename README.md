@@ -31,35 +31,56 @@ Streamlitを用いて、簡単かつ直感的に操作できるユーザーイ�
 
 ##  システムの構造と運用フロー
 
-project/
-├── models/                # 訓練済みの分類モデルと物体検出モデルの重み
-├── data/                  # サンプルデータセット
-├── src/
-│   ├── classify.py        # 分類モデルのコード
-│   ├── detect.py          # 物体検出モデルのコード
-│   ├── ocr.py             # OCR処理のコード
-│   ├── app.py             # Streamlitで動作するUIコード
-├── requirements.txt       # 必要なパッケージ
-└── README.md              # このファイル
-
 <div style="max-width: 600px; word-wrap: break-word;">
 
 
 1. 画像の入力
 ユーザーがレシート画像をアップロードします。
+<div align="medium">
+    <img src="figures/UI1.png" alt="YOLO" width="100%">
+
+</div>
+
 
 2. 分類 (Classification)
 ResNetベースの分類モデルが画像の回転角度を判定し、適切な方向に調整します。
-	
+
+<div align="medium">
+    <img src="figures/UI2.png" alt="YOLO" width="100%">
+</div>	
+
+
+<div align="medium">
+    <img src="figures/UI3.png" alt="YOLO" width="100%">
+</div>	
 
 3. 物体検出 (Object Detection)
 YOLOv9を用いて、レシート内の重要領域を検出します。検出された領域はOCRモデルに渡されます。
 
+<div align="medium">
+    <img src="figures/UI4.png" alt="YOLO" width="100%">
+</div>	
+
+<div align="medium">
+    <img src="figures/UI5.png" alt="YOLO" width="100%">
+</div>	
+
+
 4. 文字認識 (OCR)
 EasyOCRが検出領域内の文字を認識し、結果をテキスト形式で出力します。
 
+<div align="medium">
+    <img src="figures/UI6.png" alt="YOLO" width="100%">
+</div>	
+
+
 5. 結果の表示
 抽出された情報（店舗名、日時、金額など）がStreamlitのUIに表示されます。
+
+<div align="medium">
+    <img src="figures/UI7.png" alt="YOLO" width="100%">
+</div>	
+
 
 ### データ準備
 
