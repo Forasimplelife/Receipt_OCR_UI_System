@@ -235,3 +235,5 @@ rag_workflow
 
 logs/
 *.csv
+*.pt
+Backup/
