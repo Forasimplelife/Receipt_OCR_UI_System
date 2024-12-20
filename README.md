@@ -22,10 +22,10 @@
 <div style="max-width: 600px; word-wrap: break-word;">
 本システムは以下のコンポーネントで構成されています：
 
-1.	分類モデル (Classification Model)
+1.	[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model) (Classification Model)
 ResNetを基盤とした分類モデルを使用し、レシート画像の回転角度（0°, 90°, 180°, 270°）を判別します。その後、画像の角度を自動的0°調整します。
 
-2.	物体検出モデル (Detection Model)
+2.	[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model) (Detection Model)
 YOLOv9を基盤とした物体検出モデルを使用して、レシート内の重要情報が記載されている内容（電話番号、日時、金額など）を検出します。
 
 3.	文字認識モデル (OCR)
