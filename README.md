@@ -37,10 +37,11 @@ Streamlitを用いて、簡単かつ直感的に操作できるUIを提供しま
 </div>
 
 
-##  システムの構造と運用フロー
+##  システムの操作の流れ
+
+4つのステップで構成されています、画像の入力＞分類＞物体検出＞文字認識 (OCR)、具体的には以下に記載します。
 
 <div style="max-width: 600px; word-wrap: break-word;">
-
 
 1. 画像の入力
 ユーザーがレシート画像をアップロードします。
@@ -51,7 +52,7 @@ Streamlitを用いて、簡単かつ直感的に操作できるUIを提供しま
 
 
 2. 分類 (Classification)
-ResNetベースの分類モデルが画像の回転角度を判定し、適切な方向に調整します。
+ResNetベースの分類モデルが画像の回転角度を判定し、0°へ調整します。
 
 <div align="medium">
     <img src="Figures/UI2.png" alt="YOLO" width="100%">
@@ -63,7 +64,7 @@ ResNetベースの分類モデルが画像の回転角度を判定し、適切�
 </div>	
 
 3. 物体検出 (Object Detection)
-YOLOv9を用いて、レシート内の重要領域を検出します。検出された領域はOCRモデルに渡されます。
+YOLOv9を用いて、レシート内の重要ラベルを検出します。検出されたラベルははOCRモデルに渡されます。
 
 <div align="medium">
     <img src="Figures/UI4.png" alt="YOLO" width="100%">
