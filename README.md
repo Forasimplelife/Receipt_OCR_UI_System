@@ -28,7 +28,7 @@
 
 1.	[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model) (Classification Model)
     
-    ResNetを基盤とした分類モデルを使用し、レシート画像の回転角度（0°, 90°, 180°, 270°）を判別します。その後、画像の角度を自動的0°調整します。
+    ResNetを基盤とした分類モデルを使用し、レシート画像の回転角度（0°, 90°, 180°, 270°）を判別します。その後、画像の角度を自動的0°に調整します。
 
 2.	[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model) (Detection Model)
     
@@ -47,7 +47,7 @@
 
 ##  システムの操作の流れ
 
-4つのステップで構成されています、画像の入力＞分類＞物体検出＞文字認識 (OCR)、具体的には以下に記載します。
+4つのステップで構成されています、画像の入力＞分類＞物体検出＞文字認識 (OCR)、具体的には以下に説明します。
 
 <div style="max-width: 600px; word-wrap: break-word;">
 
@@ -84,7 +84,7 @@ YOLOv9を用いて、レシート内の重要ラベルを検出します。検�
 
 
 4. 文字認識 (OCR)
-EasyOCRが検出領域内の文字を認識し、結果をテキスト形式で出力します。
+EasyOCRが検出領域内の文字を認識し、結果をCSVダウンロードできます。
 
 <div align="medium">
     <img src="Figures/UI6.png" alt="YOLO" width="100%">
@@ -92,7 +92,7 @@ EasyOCRが検出領域内の文字を認識し、結果をテキスト形式で�
 
 
 5. 結果の表示
-抽出された情報（店舗名、日時、金額など）がStreamlitのUIに表示されます。
+抽出された情報（電話番号、日時、金額など）がCSVフィアルに表示されます。
 
 <div align="medium">
     <img src="Figures/UI7.png" alt="YOLO" width="100%">
