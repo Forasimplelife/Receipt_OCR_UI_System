@@ -5,14 +5,18 @@
 
 <div style="max-width: 600px; word-wrap: break-word;">
 
-この記事では、OCR認識UIシステムの構築プロセスについて詳しく紹介します。このシステムは、領収書画像から電話番号、日時、金額などの重要な情報を正確かつ効率的に抽出することができます。構築には、自分の作った[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model)と[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model)という2つのAIモデルを統合し、領収書内の情報を効果的に解析しています。文字認識には高精度なEasyOCRを採用し、データの抽出精度をさらに向上させました。また、UIの構築にはStreamlitを使用しており、シンプルで直感的な操作を可能にする画面を実現しました
-
+この記事では、OCR認識UIシステムの構築プロセスについて詳しく紹介します。このシステムは、領収書画像から電話番号、日時、金額などの重要な情報を正確かつ効率的に抽出することができます。構築には、自分の作った[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model)と[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model)という2つのAIモデルを統合し、領収書内の情報を検出します。文字認識にはEasyOCRを採用し、データの抽出精度をさらに向上させました。また、UIの構築にはStreamlitを使用しており、シンプルで直感的な操作を可能にする画面を実現しました。
 </div>
 
-この UIシステムは領収書の写真をアップロードし、その後は角度の調整、物体検出とOCR認識を一貫で行なっています。
+
+ UIのデーザン
+<div align="medium">
+    <img src="Figures/UI1.png" alt="YOLO" width="100%">
+</div>
+
+このUIシステムは領収書の写真をアップロードし、その後は角度の調整、物体検出とそしてOCR認識までを一連の流れで処理します。
 <div align="medium">
     <img src="Figures/UI8.png" alt="YOLO" width="100%">
-
 </div>
 
 
