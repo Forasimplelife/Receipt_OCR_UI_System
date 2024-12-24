@@ -1,11 +1,13 @@
 
-# 領収書の分類、認識とOCRのUIシステム
+# 領収書の分類、検出とOCR認識のUIシステム
 
 ## Summary
 
 <div style="max-width: 600px; word-wrap: break-word;">
 
-この記事では、OCR認識UIシステムの構築プロセスについて詳しく紹介します。このシステムは、領収書画像から電話番号、日時、金額などの重要な情報を正確かつ効率的に抽出することができます。構築には、自分の作った[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model)と[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model)という2つのAIモデルを統合し、領収書内の情報を検出します。文字認識にはEasyOCRを採用し、データの抽出精度をさらに向上させました。また、UIの構築にはStreamlitを使用しており、シンプルで直感的な操作を可能にする画面を実現しました。
+この記事では、OCR認識UIシステムの構築プロセスについて詳しく紹介します。このシステムは、領収書画像から電話番号、日付、金額などの重要な情報を正確かつ効率的に抽出することができます。構築には、自分の作った[分類モデル](https://github.com/Forasimplelife/Receipt_classificaion_model)と[物体検出モデル](https://github.com/Forasimplelife/Receipt_detection_model)という2つのAIモデルを統合し、領収書の分類と情報を検出に行きますし。文字認識にはEasyOCRを採用し、検出した情報を認識に行きます。また、UIの構築にはStreamlitを使用しており、複雑なフロントエンドの開発知識を必要とせず、直感的でシンプルなUIシステムを手軽に制作できます。
+
+
 </div>
 
 
